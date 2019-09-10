@@ -2,20 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ce1bc90-6b33-4bef-866c-18e69a45ac9b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assistant-demo/src/main/java/com/feidao/server/assistant/AssistantApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assistant-demo/src/main/java/com/feidao/server/assistant/controller/DemoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assistant-demo/src/main/java/com/feidao/server/assistant/controller/ServerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assistant-demo/src/main/java/com/feidao/server/assistant/entity/DefinitionParams.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assistant-demo/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assistant-demo/src/main/resources/error.page/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assistant-demo/src/main/resources/error.page/500.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assistant-demo/src/main/resources/static/404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assistant-demo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/assistant-demo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assistant-demo/src/main/resources/error.page/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/assistant-demo/src/main/resources/resources.error/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assistant-demo/src/main/resources/error.page/500.html" beforeDir="false" afterPath="$PROJECT_DIR$/assistant-demo/src/main/resources/resources.error/500.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,6 +69,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assistant-demo/src/main/resources/static" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -90,6 +82,9 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\MyCodes\server-assistant\assistant-demo\src\main\resources\static" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\MyCodes\server-assistant\assistant-demo\src\main\resources\web\css" />
     </key>
@@ -147,8 +142,16 @@
       <option name="presentableId" value="Default" />
       <updated>1567991264790</updated>
       <workItem from="1567991267900" duration="259000" />
-      <workItem from="1568077501142" duration="20753000" />
+      <workItem from="1568077501142" duration="21489000" />
     </task>
+    <task id="LOCAL-00001" summary="2019.9.10提交">
+      <created>1568113861894</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1568113861894</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,5 +167,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2019.9.10提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="2019.9.10提交" />
   </component>
 </project>
