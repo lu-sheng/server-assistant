@@ -3,6 +3,7 @@ package com.feidao.server.assistant.controller;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.feidao.server.assistant.entity.DefinitionParams;
+import com.feidao.server.assistant.entity.TimeStampEntity;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import org.apache.catalina.startup.FailedContext;
@@ -22,10 +23,12 @@ import java.util.TreeSet;
  * LN
  * 2019/9/10 0010 10:40
  */
+//@CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
 @RequestMapping("/server")
 public class ServerController {
     Logger logger = LoggerFactory.getLogger(getClass());
+
 
     @PostMapping("/paramVerify")
     @ApiOperation(value = "获取参数验证模板代码")
@@ -72,28 +75,36 @@ public class ServerController {
 
     @GetMapping("/timestampToString/{timeStamp}")
     @ApiOperation(value = "将时间戳转换为字符串的格式")
-    private String timestampToString(@ApiParam(value = "时间戳")
+    private TimeStampEntity timestampToString(@ApiParam(value = "时间戳")
                                      @PathVariable(name = "timeStamp") long timeStamp) {
+        TimeStampEntity timeStampEntity = new TimeStampEntity();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        return simpleDateFormat.format(timeStamp);
+        timeStampEntity.setTimestamp(timeStamp+"");
+        timeStampEntity.setTimestampStr(simpleDateFormat.format(timeStamp));
+
+        return timeStampEntity;
     }
 
     @GetMapping("/stringToTimestamp")
     @ApiOperation(value = "将字符串转换为时间戳的格式")
-    private String stringToTimestamp(@ApiParam(value = "字符串格式的时间")
+    private TimeStampEntity stringToTimestamp(@ApiParam(value = "字符串格式的时间")
                                      @RequestParam(value = "timeStr") String timeStr,
                                      @RequestParam(value = "dateFormat") String dateFormat) {
+        TimeStampEntity timeStampEntity = new TimeStampEntity();
+        timeStampEntity.setTimestampFormat(dateFormat);
+        timeStampEntity.setTimestampStr(timeStr);
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(dateFormat);
         String timeStamp;
         try {
             timeStamp = simpleDateFormat.parse(timeStr).getTime() + "";
+            timeStampEntity.setTimestamp(timeStamp);
         } catch (ParseException e) {
             e.printStackTrace();
             timeStamp = "时间转换异常，请检查\r\n" +
                     "时间字符串：" + timeStr + "\r\n" +
                     "转换格式：" + dateFormat + "\r\n" + "是否正确！";
         }
-        return timeStamp;
+        return timeStampEntity;
     }
 
 
